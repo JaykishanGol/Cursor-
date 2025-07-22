@@ -1,15 +1,29 @@
 services:
+
   - type: web
+
     name: watchlist-app
+
     env: static
+
     buildCommand: npm ci && npm run build
+
     staticPublishPath: ./dist
+
     envVars:
+
       - key: NODE_VERSION
+
         value: "18"
+
       - key: VITE_TMDB_API_KEY
+
         value: 10069c04fb7414dd0a7683abb054c50b
+
       - key: VITE_TMDB_BASE_URL
+
         value: https://api.themoviedb.org/3
+
       - key: VITE_TMDB_IMAGE_BASE_URL
+
         value: https://image.tmdb.org/t/p
